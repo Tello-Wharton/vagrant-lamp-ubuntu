@@ -14,5 +14,4 @@ rm /etc/apache2/apache2.conf
 ln -s /resources/apache/apache2.conf /etc/apache2/apache2.conf
 
 #install supervisord
-apt-get install python-setuptools
-easy_install supervisor
+apt-get -y install supervisor
