@@ -11,5 +11,6 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   config.vm.provision "shell", path: "scripts/bootstrap.sh"
+  config.vm.provision "shell", path: "scripts/services.sh", privileged: false
 
 end

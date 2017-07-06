@@ -19,3 +19,5 @@ apt-get -y install supervisor
 #use supervisor configs on hosts machine
 rm -r /etc/supervisor
 ln -s /resources/supervisord /etc/supervisor
+
+service supervisor start
