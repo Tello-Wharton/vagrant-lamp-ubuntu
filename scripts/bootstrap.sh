@@ -13,5 +13,9 @@ apt-get -y install apache2
 rm /etc/apache2/apache2.conf
 ln -s /resources/apache/apache2.conf /etc/apache2/apache2.conf
 
-#install supervisord
+#install supervisor
 apt-get -y install supervisor
+
+#use supervisor configs on hosts machine
+rm -r /etc/supervisor
+ln -s /resources/supervisord /etc/supervisor
