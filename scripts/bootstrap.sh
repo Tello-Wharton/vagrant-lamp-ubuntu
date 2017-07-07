@@ -33,3 +33,6 @@ EOF
 
 #install PHP
 apt-get -y install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql
+
+rm -r /var/www/html/
+ln -s /vagrant/html /var/www/html
