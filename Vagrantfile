@@ -13,4 +13,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/bootstrap.sh"
   config.vm.provision "shell", path: "scripts/services.sh", run: "always", privileged: false
 
+  config.vm.post_up_message = "Go to http://localhost:8080 to get started!"
+
 end
