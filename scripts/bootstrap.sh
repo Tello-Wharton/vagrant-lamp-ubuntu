@@ -38,9 +38,9 @@ rm -r /var/www/html/
 ln -s /vagrant/html /var/www/html
 
 
-debconf-set-selections <<< "phpmyadmin phpmyadmin/internal/skip-preseed boolean true"
-debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect"
-debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean false"
+echo "phpmyadmin phpmyadmin/internal/skip-preseed boolean true"	| debconf-set-selections
+echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect" 	| debconf-set-selections
+echo "phpmyadmin phpmyadmin/dbconfig-install boolean false" 	| debconf-set-selections
 
 apt-get -y install phpmyadmin
 
