@@ -20,4 +20,13 @@ apt-get -y install supervisor
 rm -r /etc/supervisor
 ln -s /resources/supervisord /etc/supervisor
 
-service supervisor start
+#install MariaDB
+apt-get -y install mariadb-server
+systemctl start mysql
+
+cat << EOF | mysql
+	use mysql;
+	update user set plugin='' where User='root';
+	flush privileges;
+	SET PASSWORD FOR 'root'@'localhost' = PASSWORD('congrats');
+EOF
