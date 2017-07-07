@@ -36,3 +36,11 @@ apt-get -y install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql
 
 rm -r /var/www/html/
 ln -s /vagrant/html /var/www/html
+
+
+debconf-set-selections <<< "phpmyadmin phpmyadmin/internal/skip-preseed boolean true"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect"
+debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean false"
+
+apt-get -y install phpmyadmin
+
