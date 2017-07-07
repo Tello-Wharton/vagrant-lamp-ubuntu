@@ -30,3 +30,6 @@ cat << EOF | mysql
 	flush privileges;
 	SET PASSWORD FOR 'root'@'localhost' = PASSWORD('congrats');
 EOF
+
+#install PHP
+apt-get -y install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql
