@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Index</title>
+	<title>Done!</title>
 </head>
 <body>
-Index
+	<header>
+		<h2>Aannnndddddd you're done!</h2>
+	</header>
+	<section>
+		<p>Useful Links</p>
+		<ul>
+			<li>
+				<a href="https://github.com/Tello-Wharton/vagrant-lamp-ubuntu" target="_blank">Github Repo</a>
+			</li>
+			<li>
+				<a href=":7000" target="_blank">Supervisor</a>
+			</li>
+			<li>
+				<a href="apache.html" target="_blank">Default Apache Page</a>
+			</li>
+			<li>
+				<a href="info.php" target="_blank">PHP Info</a>
+			</li>
+		</ul>
+	</section>
+	<script type="text/javascript">
+		document.addEventListener('click', function(event) {
+			var target = event.target;
+			if (target.tagName.toLowerCase() == 'a') {
+			 	var port = target.getAttribute('href').match(/^:(\d+)(.*)/);
+			  	if (port){
+			     	target.href = port[2];
+			     	target.port = port[1];
+			  	}
+			}
+		}, false);
+	</script>
 </body>
 </html>
